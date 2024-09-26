@@ -12,14 +12,21 @@ CREATE TABLE Decada (
     Decada VARCHAR(128) NOT NULL UNIQUE
 );
 
+CREATE TABLE TipoConflicto (
+    id_TipoConflicto INT PRIMARY KEY AUTO_INCREMENT,
+    Nombre VARCHAR(128) NOT NULL UNIQUE
+);
+
 CREATE TABLE Eventos (
     id_Evento INT PRIMARY KEY AUTO_INCREMENT,
     Nombre VARCHAR(128) NOT NULL UNIQUE,
     Descripcion TEXT NOT NULL,
     id_Decada INT NOT NULL,
     id_Alcance INT NOT NULL,
+    id_TipoConflicto INT NOT NULL,
     FOREIGN KEY (id_Decada) REFERENCES Decada (id_Decada),
-    FOREIGN KEY (id_Alcance) REFERENCES Alcance (id_Alcance)
+    FOREIGN KEY (id_Alcance) REFERENCES Alcance (id_Alcance),
+    FOREIGN KEY (id_TipoConflicto) REFERENCES TipoConflicto (id_TipoConflicto)
 );
 
 CREATE TABLE Documentacion (
@@ -33,19 +40,6 @@ CREATE TABLE Eventos_Documentacion (
     id_Documentacion INT NOT NULL,
     FOREIGN KEY (id_Evento) REFERENCES Eventos (id_Evento),
     FOREIGN KEY (id_Documentacion) REFERENCES Documentacion (id_Documentacion)
-);
-
-CREATE TABLE TipoConflicto (
-    id_TipoConflicto INT PRIMARY KEY AUTO_INCREMENT,
-    Nombre VARCHAR(128) NOT NULL UNIQUE
-);
-
-CREATE TABLE Eventos_TipoConflicto (
-    id_Eventos_TipoConflicto INT PRIMARY KEY AUTO_INCREMENT,
-    id_Evento INT NOT NULL,
-    id_TipoConflicto INT NOT NULL,
-    FOREIGN KEY (id_Evento) REFERENCES Eventos (id_Evento),
-    FOREIGN KEY (id_TipoConflicto) REFERENCES TipoConflicto (id_TipoConflicto)
 );
 
 CREATE TABLE Personajes (
