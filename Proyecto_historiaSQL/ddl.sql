@@ -50,9 +50,9 @@ CREATE TABLE Eventos_TipoConflicto (
 
 CREATE TABLE Personajes (
     id_Personajes INT PRIMARY KEY AUTO_INCREMENT,
-    Nombre VARCHAR(128) NOT NULL,
-    Fecha_Nacimiento DATE NOT NULL,
-    Fecha_Fallecimiento DATE
+    Nombre VARCHAR(128) NOT NULL UNIQUE,
+    Fecha_Nacimiento INT,
+    Fecha_Fallecimiento INT
 );
 
 CREATE TABLE Eventos_Personajes (
@@ -65,7 +65,7 @@ CREATE TABLE Eventos_Personajes (
 
 CREATE TABLE Locaciones (
     id_Locacion INT PRIMARY KEY AUTO_INCREMENT,
-    Nombre VARCHAR(128) NOT NULL
+    Nombre VARCHAR(128) NOT NULL UNIQUE
 );
 
 CREATE TABLE Eventos_Locaciones (
@@ -78,7 +78,7 @@ CREATE TABLE Eventos_Locaciones (
 
 CREATE TABLE Causas (
     id_Causa INT PRIMARY KEY AUTO_INCREMENT,
-    Nombre VARCHAR(128) NOT NULL
+    Nombre VARCHAR(128) NOT NULL UNIQUE
 );
 
 CREATE TABLE Eventos_Causas (
