@@ -50,126 +50,173 @@ VALUES
     ('2020s');
 
 INSERT INTO
-    Eventos (Nombre, Descripcion, id_Decada, id_Alcance)
+    TipoConflicto (Nombre)
+VALUES
+    ('Guerra Civil'),
+    ('Revolución'),
+    ('Guerra Mundial'),
+    ('Invasión'),
+    ('Guerra de Independencia'),
+    ('Guerra Fría'),
+    ('Guerra Religiosa'),
+    ('Guerrilla'),
+    ('Conflicto Étnico'),
+    ('Guerra Territorial'),
+    ('Conflicto Fronterizo'),
+    ('Conflicto Político'),
+    ('Guerra Económica'),
+    ('Conflicto Internacional'),
+    ('Rebelión'),
+    ('Intervención Militar'),
+    ('Guerra de Guerrillas'),
+    ('Conflicto Ambiental'),
+    ('Guerra Tecnológica'),
+    ('Conquista'),
+    ('Revolucion Tecnologica'),
+    ('Crisis Económica'),
+    ('Crisis Sanitaria');
+
+INSERT INTO
+    Eventos (Nombre, Descripcion, id_Decada, id_Alcance, id_TipoConflicto)
 VALUES
     (
         'Descubrimiento de América',
         'El viaje de Cristóbal Colón que llevó al descubrimiento del continente americano por los europeos, abriendo paso a la exploración y colonización del Nuevo Mundo',
         1,
-        1
+        1,
+        20
     ),
     (
         'Conquista de Tenochtitlán',
         'Hernán Cortés y su ejército conquistaron la capital del Imperio Azteca, marcando el inicio del dominio español en México y la caída de Tenochtitlán',
         2,
-        1
+        1,
+        20
     ),
     (
         'Batalla de Alcántara',
         'Un conflicto entre Portugal y España por la sucesión al trono portugués, que resultó en la unión temporal de ambos reinos bajo la monarquía española',
         3,
-        2
+        2,
+        12
     ),
     (
         'Guerra Civil Inglesa',
         'Un conflicto entre el Parlamento y el rey Carlos I por el control del gobierno, que terminó con la ejecución del rey y el establecimiento de la Commonwealth bajo Oliver Cromwell',
         4,
-        2
+        2,
+        1
     ),
     (
         'Independencia de Estados Unidos',
         'Las Trece Colonias de América del Norte lucharon por su independencia del Reino Unido, resultando en la creación de los Estados Unidos de América',
         6,
-        1
+        1,
+        5
     ),
     (
         'Revolución Francesa',
         'Una serie de eventos revolucionarios que llevaron al fin de la monarquía en Francia y a profundas transformaciones sociales, políticas y económicas',
         7,
+        2,
         2
     ),
     (
         'Grito de Dolores e inicio de la Independencia de México',
         'Un llamado del sacerdote Miguel Hidalgo inició el movimiento de independencia contra el dominio colonial español en México',
         8,
-        1
+        1,
+        5
     ),
     (
         'Guerra de los Pasteles',
         'Un conflicto entre México y Francia provocado por reclamaciones económicas de empresarios franceses, que resultó en una breve intervención militar',
         9,
-        15
+        15,
+        13
     ),
     (
         'Guerra Civil Americana',
         'Un conflicto interno en los Estados Unidos entre los estados del Norte y el Sur, causado principalmente por la esclavitud y los derechos de los estados, que terminó con la abolición de la esclavitud',
         10,
+        1,
         1
     ),
     (
         'Unificación de Alemania',
         'El esfuerzo liderado por Prusia y Otto von Bismarck resultó en la unificación de varios estados alemanes en un solo Imperio Alemán, tras la victoria sobre Francia en la Guerra Franco-Prusiana',
         11,
-        2
+        2,
+        10
     ),
     (
         'Primera Guerra Mundial',
         'Un conflicto global que involucró a las principales potencias mundiales, causado por tensiones políticas, militares y territoriales, y que resultó en millones de muertos y cambios en las fronteras europeas',
         12,
-        5
+        5,
+        3
     ),
     (
         'Gran Depresión',
         'Una severa crisis económica global que comenzó con el colapso de la bolsa de valores en 1929, llevando a un declive económico prolongado y sufrimiento social',
         13,
-        6
+        6,
+        22
     ),
     (
         'Segunda Guerra Mundial',
         'Un conflicto global impulsado por el expansionismo nazi y la respuesta aliada, que culminó con la caída de los regímenes totalitarios y profundas transformaciones políticas y territoriales',
         14,
-        10
+        10,
+        3
     ),
     (
         'Guerra de Corea',
         'Un conflicto entre Corea del Norte, apoyada por China y la Unión Soviética, y Corea del Sur, apoyada por Estados Unidos y la ONU, que estableció la división permanente de la península coreana',
         16,
-        5
+        5,
+        14
     ),
     (
         'Llegada del hombre a la Luna',
         'La misión Apolo 11 de la NASA llevó a los primeros humanos a la Luna en 1969, en el contexto de la carrera espacial entre Estados Unidos y la Unión Soviética',
         10,
-        7
+        7,
+        19
     ),
     (
         'Caída del Muro de Berlín',
         'La caída del Muro de Berlín en 1989 simbolizó el colapso del comunismo en Europa del Este y la reunificación de Alemania',
         18,
-        2
+        2,
+        12
     ),
     (
         'Disolución de la Unión Soviética',
         'La desintegración de la Unión Soviética en 1991 marcó el fin del comunismo en gran parte de Europa del Este y la aparición de varios estados independientes',
         19,
-        2
+        2,
+        12
     ),
     (
         'Atentados del 11 de septiembre',
         'Un ataque terrorista en 2001 en el que aviones secuestrados impactaron las Torres Gemelas y el Pentágono, cambiando la política de seguridad global y provocando la "Guerra contra el Terrorismo',
         20,
-        9
+        9,
+        14
     ),
     (
         'Pandemia de COVID-19',
         'Una pandemia global causada por el virus SARS-CoV-2 que afectó gravemente la salud pública, la economía y la movilidad de las personas en todo el mundo',
         21,
-        8
+        8,
+        23
     ),
     (
         'Revolución Industrial',
         'Un periodo de transformación en Europa, impulsado por avances tecnológicos, que cambió la producción industrial, la economía y la estructura social',
         5,
+        13,
         13
     );
 
@@ -742,57 +789,6 @@ VALUES
     (17, 20),
     (16, 20),
     (20, 20);
-
-INSERT INTO
-    TipoConflicto (Nombre)
-VALUES
-    ('Guerra Civil'),
-    ('Revolución'),
-    ('Guerra Mundial'),
-    ('Invasión'),
-    ('Guerra de Independencia'),
-    ('Guerra Fría'),
-    ('Guerra Religiosa'),
-    ('Guerrilla'),
-    ('Conflicto Étnico'),
-    ('Guerra Territorial'),
-    ('Conflicto Fronterizo'),
-    ('Conflicto Político'),
-    ('Guerra Económica'),
-    ('Conflicto Internacional'),
-    ('Rebelión'),
-    ('Intervención Militar'),
-    ('Guerra de Guerrillas'),
-    ('Conflicto Ambiental'),
-    ('Guerra Tecnológica'),
-    ('Conquista'),
-    ('Revolucion Tecnologica'),
-    ('Crisis Económica'),
-    ('Crisis Sanitaria');
-
-INSERT INTO
-    Eventos_TipoConflicto (id_TipoConflicto, id_Evento)
-VALUES
-    (20, 1),
-    (20, 2),
-    (12, 3),
-    (1, 4),
-    (5, 5),
-    (2, 6),
-    (5, 7),
-    (13, 8),
-    (1, 9),
-    (10, 10),
-    (3, 11),
-    (22, 12),
-    (3, 13),
-    (14, 14),
-    (19, 15),
-    (12, 16),
-    (12, 17),
-    (14, 18),
-    (23, 19),
-    (22, 20);
 
 INSERT INTO
     Personajes (Nombre, Fecha_Nacimiento, Fecha_Fallecimiento)
